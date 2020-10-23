@@ -1,0 +1,19 @@
+header#main-header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgb(124, 202, 104);
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 155px;
+    background-image: url("https://www.pngonly.com/wp-content/uploads/2018/11/free-stars-png-10201-210x210.png");
+}
+header#main-header a{
+    margin: 30px;
+}
