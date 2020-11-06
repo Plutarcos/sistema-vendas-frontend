@@ -44,6 +44,7 @@ class CriarOrder extends Component {
  
     render() {
         const { redirect } = this.state;
+
         if (redirect) {
             return <Redirect to="/orders" />;
         } else {
@@ -52,13 +53,14 @@ class CriarOrder extends Component {
                     <fieldset>
                         <legend>Criar Pedido</legend>
                         <div className="order-insert">
-                            <label htmlFor="product">Produto </label>
+                            <label htmlFor="product">Produto(s) </label>
                             <br />
                             <input
+                                title="Exemplo: Arroz, Feijão, Batata..."
                                 type="text"
                                 id="product"
                                 name="product"
-                                placeholder="Produto"
+                                placeholder="Produto(s)"
                                 min="3"
                                 max="100"
                                 required

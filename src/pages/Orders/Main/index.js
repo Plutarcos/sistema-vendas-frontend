@@ -20,11 +20,13 @@ export default class Main extends Component {
             )
             .catch(erro => this.setState({ erro }));
     }
+    
  
     render() {
         const { order } = this.state;
- 
+        let {products} = this.state
         return (
+            
             <div className="order-list">
                 <Link to={`/criarOrder`}> <button type="button" class="btn btn-success">Novo</button> </Link>
                 <br /><br /> 
@@ -43,6 +45,24 @@ export default class Main extends Component {
                         {order.map((order, index) => (
                             <tr>
                                 <th scope="row">{order.id}</th>
+                                <button>Novo Produto</button>
+                                    {
+                                    products.map((val, idx)=> {
+                                        let productId = `product-${idx}`
+                                        return (
+                                        <div key={idx}>
+                                            <label htmlFor={productId}>{`Product #${idx + 1}`}</label>
+                                            <input
+                                            type="text"
+                                            name={productId}
+                                            data-id={idx}
+                                            id={productId}
+                                            className="name"
+                                            />
+                                        </div>
+                                        )
+                                    })
+                                    }
                                 <td>{order.product}</td>
                                 <td>{order.client}</td>
                                 <td>{order.valor}</td>
@@ -55,4 +75,5 @@ export default class Main extends Component {
             </div>
         )
     }
+    
 }
