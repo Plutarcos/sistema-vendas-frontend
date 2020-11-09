@@ -44,24 +44,7 @@ export default class Main extends Component {
                         <tbody>
                             {order.map((order, index) => (
                                 <tr>
-                                    <th scope="row">{order.id}</th>
-                                    {
-                                        products.map((val, idx) => {
-                                            let productId = `product-${idx}`
-                                            return (
-                                                <div key={idx}>
-                                                    <label htmlFor={productId}>{`Product #${idx + 1}`}</label>
-                                                    <input
-                                                        type="text"
-                                                        name={productId}
-                                                        data-id={idx}
-                                                        id={productId}
-                                                        className="name"
-                                                    />
-                                                </div>
-                                            )
-                                        })
-                                    }
+                                    
                                     <td>{order.product}</td>
                                     <td>{order.client}</td>
                                     <td>{order.valor}</td>

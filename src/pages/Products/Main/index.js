@@ -54,7 +54,7 @@ export default class Main extends Component {
                             ))}
                         </tbody>
                     </table>
-                    <Link to={`/criarProduct`}> <button type="button" class="btn btn-success">Novo</button> </Link>
+                    <Link to={`/criarProduct`}> <button type="button" class="btn btn-outline-dark">Novo</button> </Link>
                 </Card>
             </div>
         )
