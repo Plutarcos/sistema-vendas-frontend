@@ -1,0 +1,20 @@
+.order-insert input{
+    background: aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+    color: dimgray;
+}
+ 
+.order-insert label{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.order-insert{
+    margin-top: 10px;
+}

@@ -1,0 +1,20 @@
+.product-update input{
+    background: aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+    color: dimgray;
+}
+ 
+.product-update label{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.product-update{
+    margin-top: 20px;
+}
