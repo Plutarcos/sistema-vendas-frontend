@@ -1,4 +1,6 @@
-.middle{
-    background: rgb(209, 209, 209);
-
+.App .Cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 60px;
 }
