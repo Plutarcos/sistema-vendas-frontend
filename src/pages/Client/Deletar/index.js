@@ -50,10 +50,9 @@ class DeletarClient extends Component {
         } else {
             return (
                 <fieldset>
-                    <legend>Deletar Usuário</legend>
                     <div className="client-delete">
                         <label htmlFor="nome">{this.state.client.nome} </label>
-                        <p>Tem certeza que deseja deletar este registro?</p>
+                        <h1>Tem certeza que deseja deletar este registro?</h1>
  
                         <button
                             onClick={this.handleClick}
