@@ -66,12 +66,12 @@ export default class Main extends Component {
                                     <td>{order.client}</td>
                                     <td>{order.valor}</td>
                                     <td>{order.quantidade}</td>
-                                    <td> <Link to={`/deletarOrder/${order.id}`}> <button type="button" class="btn btn-danger">Excluir</button> </Link></td>
+                                    <td> <Link to={`/deletarOrder/${order.id}`}> <button type="button" class="btn btn-outline-dark">Excluir</button> </Link></td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-                    <Link to={`/criarOrder`}> <button type="button" class="btn btn-success">Novo</button> </Link>
+                    <Link to={`/criarOrder`}> <button type="button" class="btn btn-outline-dark">Novo</button> </Link>
                 </Card>
             </div>
         )

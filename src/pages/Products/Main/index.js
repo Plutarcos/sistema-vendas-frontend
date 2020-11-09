@@ -47,9 +47,9 @@ export default class Main extends Component {
                                     <td>{product.preçoCusto}</td>
                                     <td>{product.preçoVenda}</td>
                                     <td>{product.quantidadeEstoque}</td>
-                                    <td> <Link to={`/products/${product.id}`}> <button type="button" class="btn btn-primary">Detalhes</button> </Link> </td>
-                                    <td> <Link to={`/editarProduct/${product.id}`}> <button type="button" class="btn btn-warning">Editar</button> </Link></td>
-                                    <td> <Link to={`/deletarProduct/${product.id}`}> <button type="button" class="btn btn-danger">Excluir</button> </Link></td>
+                                    <td> <Link to={`/products/${product.id}`}> <button type="button" class="btn btn-outline-dark">Detalhes</button> </Link> </td>
+                                    <td> <Link to={`/editarProduct/${product.id}`}> <button type="button" class="btn btn-outline-dark">Editar</button> </Link></td>
+                                    <td> <Link to={`/deletarProduct/${product.id}`}> <button type="button" class="btn btn-outline-dark">Excluir</button> </Link></td>
                                 </tr>
                             ))}
                         </tbody>

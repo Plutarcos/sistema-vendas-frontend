@@ -2,6 +2,11 @@
     margin: 80px auto 0;
     padding: 0 20px;
     max-width: 700px;
+    color: white;
+}
+.order-list table{
+
+    color: white;
 }
  
 .order-list article{
@@ -14,7 +19,7 @@
  
 .order-list article p{
     font-size: 16px;
-    color: dimgray;
+    color: rgb(255, 255, 255);
     margin-top: 5px;
     line-height: 24px;
 }
@@ -25,7 +30,7 @@
     border: 2px solid black;
     background: none;
     margin-top: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
@@ -38,3 +43,4 @@
     background: blue;
     color: #fff;
 }
+

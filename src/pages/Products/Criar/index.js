@@ -101,7 +101,7 @@ class CriarProduct extends Component {
                                 />
                             </div>
 
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="btn btn-outline-dark">
                                 Cadastrar
                     </button>
                         </fieldset>

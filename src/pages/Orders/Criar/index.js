@@ -64,30 +64,32 @@ class CriarOrder extends Component {
             return (
 
                 <div className="Cards">
-                    <Card titulo="Produtos" color='green'>
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Custo</th>
-                                    <th scope="col">Valor</th>
-                                    <th scope="col">Estoque</th>
-                                    <th scope="col">Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {product.map((product, index) => (
+                    <Card titulo="Produtos" color='green' >
+                        <div Name="products-list">
+                            <table class="table table-hover">
+                                <thead>
                                     <tr>
-                                        <th scope="row">{product.id}</th>
-                                        <td>{product.nome}</td>
-                                        <td>{product.preçoCusto}</td>
-                                        <td>{product.preçoVenda}</td>
-                                        <td>{product.quantidadeEstoque}</td>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Custo</th>
+                                        <th scope="col">Valor</th>
+                                        <th scope="col">Estoque</th>
+                                        <th scope="col">Ações</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    {product.map((product, index) => (
+                                        <tr>
+                                            <th scope="row">{product.id}</th>
+                                            <td>{product.nome}</td>
+                                            <td>{product.preçoCusto}</td>
+                                            <td>{product.preçoVenda}</td>
+                                            <td>{product.quantidadeEstoque}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </Card>
                     <Card titulo="Fazer Pedido" color='cyan'>
                         <form onSubmit={this.handleSubmit}>
@@ -156,7 +158,7 @@ class CriarOrder extends Component {
                                     />
                                 </div>
 
-                                <button type="submit" className="btn btn-primary">
+                                <button type="submit" className="btn btn-outline-dark">
                                     Cadastrar
                     </button>
                             </fieldset>
