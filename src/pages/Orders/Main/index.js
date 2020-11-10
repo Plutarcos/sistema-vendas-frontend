@@ -33,7 +33,6 @@ export default class Main extends Component {
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Produto</th>
                                 <th scope="col">Cliente</th>
                                 <th scope="col">Valor</th>

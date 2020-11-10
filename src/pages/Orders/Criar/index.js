@@ -28,11 +28,7 @@ class CriarOrder extends Component {
                 product.json().then(product => this.setState({ product }))
             )
             .catch(erro => this.setState({ erro }));
-    }
 
-
-
-    componentDidMount() {
         fetch(`${process.env.REACT_APP_API_URL}/sistema/orders`)
             .then(order =>
                 order.json().then(order => this.setState({ order }))
@@ -53,10 +49,10 @@ class CriarOrder extends Component {
         }
     }
 
-
     render() {
         const { redirect } = this.state;
         const { product } = this.state;
+        let productList = [];
 
         if (redirect) {
             return <Redirect to="/orders" />;
@@ -65,8 +61,8 @@ class CriarOrder extends Component {
 
                 <div className="Cards">
                     <Card titulo="Produtos" color='green' >
-                        <div Name="products-list">
-                            <table class="table table-hover">
+                        <div className="products-list">
+                            <table className="table table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
@@ -74,7 +70,6 @@ class CriarOrder extends Component {
                                         <th scope="col">Custo</th>
                                         <th scope="col">Valor</th>
                                         <th scope="col">Estoque</th>
-                                        <th scope="col">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,6 +81,7 @@ class CriarOrder extends Component {
                                             <td>{product.preçoVenda}</td>
                                             <td>{product.quantidadeEstoque}</td>
                                         </tr>
+
                                     ))}
                                 </tbody>
                             </table>
