@@ -11,12 +11,11 @@ class CriarOrder extends Component {
 
         this.state = {
             order: {
-                product: "",
-                client: "",
                 valor: "",
                 quantidade: ""
             },
             product: [],
+            client: [],
             erro: null,
             redirect: false
         };
@@ -32,6 +31,12 @@ class CriarOrder extends Component {
         fetch(`${process.env.REACT_APP_API_URL}/sistema/orders`)
             .then(order =>
                 order.json().then(order => this.setState({ order }))
+            )
+            .catch(erro => this.setState({ erro }));
+
+            fetch(`${process.env.REACT_APP_API_URL}/sistema/clients`)
+            .then(client =>
+                client.json().then(client => this.setState({ client }))
             )
             .catch(erro => this.setState({ erro }));
     }
@@ -52,15 +57,23 @@ class CriarOrder extends Component {
     render() {
         const { redirect } = this.state;
         const { product } = this.state;
-        let productList = [];
+        const { client } = this.state;
+        let productList = product.map((product, index) =>
+            <option key={product.nome}>{product.nome}</option>
+        );
+        let clientList = client.map((client, index) =>
+            <option key={client.nome}>{client.nome}</option>
+        );
 
         if (redirect) {
             return <Redirect to="/orders" />;
         } else {
+
+
             return (
 
                 <div className="Cards">
-                    <Card titulo="Produtos" color='green' >
+                    <Card titulo="Tabela de Preços" color='green' >
                         <div className="products-list">
                             <table className="table table-hover">
                                 <thead>
@@ -85,46 +98,37 @@ class CriarOrder extends Component {
                                     ))}
                                 </tbody>
                             </table>
+
                         </div>
                     </Card>
                     <Card titulo="Fazer Pedido" color='cyan'>
                         <form onSubmit={this.handleSubmit}>
                             <fieldset>
-                                <div className="order-insert">
-                                    <label htmlFor="product">Produto(s) </label>
-                                    <br />
-                                    <input
-                                        title="Exemplo: Arroz, Feijão, Batata..."
-                                        type="text"
-                                        id="product"
-                                        name="product"
-                                        placeholder="Produto(s)"
-                                        min="3"
-                                        max="100"
-                                        required
-                                        value={this.state.order.product}
-                                        onChange={this.handleInputChange}
-                                    />
-                                (Separar com Vírgula)
+                                <div className="order-insert">                                   
+                                    <select
+                                    id="product"
+                                    name="product"
+                                    required
+                                    value={this.state.order.product}
+                                    onChange={this.handleInputChange}
+                                    >
+                                        {productList}
+                                    </select>
 
-                            </div>
-                                <div className="order-insert">
-                                    <label htmlFor="client">Cliente </label>
-                                    <br />
-                                    <input
-                                        type="text"
-                                        id="client"
-                                        name="client"
-                                        placeholder="Cliente"
-                                        min="3"
-                                        max="100"
-                                        required
-                                        value={this.state.order.client}
-                                        onChange={this.handleInputChange}
-                                    />
                                 </div>
                                 <div className="order-insert">
-                                    <label htmlFor="valor">Valor </label>
+                                <select
+                                    id="client"
+                                    name="client"
+                                    required
+                                    value={this.state.order.product}
+                                    onChange={this.handleInputChange}
+                                    >
+                                        {clientList}
+                                    </select>
+                                </div>
+                                <div className="order-insert">
+                                    <label htmlFor="valor">Valor da venda</label>
                                     <br />
                                     <input
                                         type="text"

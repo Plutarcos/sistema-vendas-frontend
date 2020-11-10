@@ -25,7 +25,6 @@ export default class Main extends Component {
 
     render() {
         const { order } = this.state;
-        let { products } = this.state
         return (
 
             <div className="order-list">
