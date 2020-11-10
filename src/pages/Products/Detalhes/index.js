@@ -24,8 +24,8 @@ export default class Product extends Component {
         return (
             <div className="Cards">
                 <Card titulo={product.nome}>
-                    <h1>Custo: {product.preçoCusto} </h1>
-                    <h1>Valor: {product.preçoVenda} </h1>
+                    <h1>Custo: R${product.preçoCusto} </h1>
+                    <h1>Valor: R${product.preçoVenda} </h1>
                     <h1>Quantidade Estoque: {product.quantidadeEstoque} </h1>
                     <br />
                     <Link to={`/products`}><button type="button" class="btn btn-outline-dark"> Voltar </button> </Link> 

@@ -16,11 +16,13 @@
     display: flex;
     justify-content: center;
     font-family: 'Lobster';
-    color: white;
+    color: white ;
+    font-family: 'Big Shoulders Stencil Text';
 }
 
 .Card .Content {
     flex: 1;
+    font-family: 'Turret Road';
     background-color: #ffffff;
     color: #000000;
     padding: 20px;

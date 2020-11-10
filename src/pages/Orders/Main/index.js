@@ -45,7 +45,7 @@ export default class Main extends Component {
                                     
                                     <td>{order.product}</td>
                                     <td>{order.client}</td>
-                                    <td>{order.valor}</td>
+                                    <td>R$:{order.valor}</td>
                                     <td>{order.quantidade}</td>
                                     <td> <Link to={`/deletarOrder/${order.id}`}> <button type="button" class="btn btn-outline-dark">Excluir</button> </Link></td>
                                 </tr>

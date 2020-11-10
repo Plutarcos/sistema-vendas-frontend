@@ -104,7 +104,9 @@ class CriarOrder extends Component {
                     <Card titulo="Fazer Pedido" color='cyan'>
                         <form onSubmit={this.handleSubmit}>
                             <fieldset>
-                                <div className="order-insert">                                   
+                                <div className="order-insert">    
+                                <label htmlFor="valor">Produto</label> <br/>
+                               
                                     <select
                                     id="product"
                                     name="product"
@@ -117,6 +119,8 @@ class CriarOrder extends Component {
 
                                 </div>
                                 <div className="order-insert">
+                                <label htmlFor="valor">Cliente</label> <br/>
+
                                 <select
                                     id="client"
                                     name="client"
